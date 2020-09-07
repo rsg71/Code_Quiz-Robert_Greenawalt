@@ -1,0 +1,41 @@
+#start-button {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+#highscores {
+    text-decoration: none;
+}
+
+.upper-nav {
+    margin-left:-30px;
+    margin-right:10px;
+}
+
+#top-display {
+    display:flex;
+    justify-content: space-between;
+    list-style-type:none;
+}
+
+#questionTitle {
+    font-weight:bold;
+}
+
+.answer-list  {
+    list-style-type: none;
+    margin:10px;
+}
+
+.hide {
+    display:none;
+}
+
+
+
+
+
+
+/* start game button */
