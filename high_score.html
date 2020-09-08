@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+
     <title>High Scores</title>
 </head>
+
 <body>
+    <div class="container" id="all-done-screen">
+        <h1>All done</h1>
+        <p>Your final score is 22.</p>
 
-    <h1>All done</h1>
-    <p>Your final score is 22.</p>
+        <form>
+            <Label>Enter Initials</Label>
+            <input id="initials">
+            <button id="submit">Submit</button>
+            </input>
+        </form>
+        <div id="response"></div>
+    </div>
 
-    <form>
-        <Label>Enter Initials</Label>
-        <input>
-            <button>Submit</button>
-        </input>
-    </form>
-    
+    <div id="highscore-screen" class="hide container">
+        <h2 id="highscores">Highscores</h2>
+        <form>
+            <p class="user-high-score">Tim 22</p>
+        </form>
 
+        <button id="go-back">Go Back</button> 
+        <button id="clear-highscores">Clear Highscores</button>
+    </div>
 
-    
+    <script src="highscorescript.js"></script>
+
 </body>
+
 </html>
