@@ -1,43 +1,28 @@
-var submit = document.getElementById("submit");
-var allDoneScreen = document.getElementById("all-done-screen");
-score = 6;
-
-var initials = document.getElementById("initials");
-var submissionResponse = document.getElementById("response");
-var userInitials = localStorage.getItem("initials");
-
 var highScoreScreen = document.getElementById("highscore-screen")
 var goBack = document.getElementById("go-back");
 var clearHighscores = document.getElementById("clear-highscores");
+var userHighScore = document.getElementById("user-high-score");
 
 
-
-submit.addEventListener("click", function(event) {
-    event.preventDefault();
+function renderHighScore () {
+    userHighScoreInitials = localStorage.getItem("initials");
+    userHighScoreNumber = localStorage.getItem("score");
     
-    var response  = "nice "+ initials.value +" , and thank you";
+    userHighScore.textContent = userHighScoreInitials + " - " + userHighScoreNumber;
     
-    // submissionResponse.textContent = response;
-    
-    
-    localStorage.setItem("initials", score);
+} 
 
-    
-
-    allDoneScreen.style.display = "none";
-    
-    highScoreScreen.classList.remove("hide");
-
-});
+renderHighScore();
 
 
-goBack.addEventListener("click", function(event) {
-    
-});
+// goBack.addEventListener("click", function(event) {
+//     location.reload();
+
+// ------------------------- need a way to get back to quiz game instead of location.reload ();--------------------
+// });
 
 clearHighscores.addEventListener("click", function(event) {
-localStorage.clear();
-
+    localStorage.clear();
 });
 
 

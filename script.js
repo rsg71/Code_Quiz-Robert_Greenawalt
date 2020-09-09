@@ -1,9 +1,12 @@
 //creating elements
-
+var startScreen = document.getElementById("start-screen")
 var startBtn = document.querySelector("#start-button");
 var quiz = document.getElementById("quiz");
 
 startBtn.addEventListener("click", initialize);
+var allDoneScreen = document.getElementById("all-done-screen");
+allDoneScreen.style.display = "none";
+
 
 
 var question = document.getElementById("question");
@@ -69,19 +72,22 @@ var questions = [
 
 ]
 
-//variables
+//more variables
 var lastQuestion = questions.length -1;
 var runningQuestion = 0;
 
 
+
 //changing display from start game button to actual game
-function initialize() {
+function initialize () {
     console.log("started")
+    startScreen.style.display = "none";
     startBtn.style.display = "none";
     quiz.classList.remove("hide");
 
+
     //counter
-    var intId = setInterval(countdown, 1000);
+    intId = setInterval(countdown, 1000);
     var counter = document.querySelector("#time_remaining");
     // var count = 100;
 
@@ -96,7 +102,6 @@ function initialize() {
 
 //render a question
 function renderQuestion () {
-    // var questionIndex = 0;
 
     var q = questions[runningQuestion];
 
@@ -127,13 +132,63 @@ function checkAnswer (answer) {
         renderQuestion();
     }
     else {
+        console.log("endgame");
         clearInterval(intId);
-        scoreRender ();
+
+
+        function showHighscoresScreen () {
+    
+            document.getElementById("quiz").className = "hide";
+            allDoneScreen.classList.remove("hide");
+            allDoneScreen.style.display = "block";
+
+            var finalScore = document.getElementById("final-score");
+            finalScore.textContent = "Your final score is " + score + " / 6";
+        }
+        
+        showHighscoresScreen();
+        console.log("getting there")
+
+        // ----------------------------------------------------------------------------------------------------------
+        //after submit button
+        var submit = document.getElementById("submit");
+        var initials = document.getElementById("initials");
+        var highScoreScreen = document.getElementById("highscore-screen")
+        var userHighScore = document.getElementById("user-high-score")
+
+
+        submit.addEventListener("click", function(event) {
+            event.preventDefault();
+            
+                
+            localStorage.setItem("initials", initials.value);
+            localStorage.setItem("score", score);
+        
+            allDoneScreen.style.display = "none";
+            
+            highScoreScreen.classList.remove("hide");
+
+            userHighScore.textContent = initials.value + " - " + score;
+            
+        
+        });
+        var clearHighscores = document.getElementById("clear-highscores");
+        clearHighscores.addEventListener("click", function(event) {
+            localStorage.clear();
+        });
+        console.log("up here")
+        
+        var goBack = document.querySelector("#go-back");
+        goBack.addEventListener("click", function () {
+            startScreen.style.display = "block";
+            startBtn.style.display = "block";
+            quiz.style.display = "none";
+            highScoreScreen.style.display = "none";
+
+
+
+            location.reload()
+        });
+        
     }
 }
-
-function scoreRender () {
-    scoreAmount.innerHTML = score;
-}
-
-

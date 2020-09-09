@@ -18,8 +18,12 @@
 
 <body>
     <div class="container">
+        <div id="start-screen" class="container">
+            <h1>Code Quiz Challenge</h1>
+            <p>Try to answer the following questions before the time expires</p>
+            <button id="start-button">Start Game</button>
+        </div>
 
-        <button id="start-button">Start Game</button>
         <div id="quiz" class="hide">
             <div class="upper-nav">
                 <ul id="top-display">
@@ -53,6 +57,33 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container hide" id="all-done-screen">
+        <h1>All done</h1>
+        <p id="final-score">Your final score is 22.</p>
+
+        <form>
+            <Label>Enter Initials</Label>
+            <input id="initials">
+            <button id="submit">Submit</button>
+            </input>
+        </form>
+        <div id="response"></div>
+    </div>
+
+    <div class="container hide" id="highscore-screen">
+        <h2 id="highscores">Highscores</h2>
+        <form>
+            <p id="user-high-score">Tim 22</p>
+        </form>
+
+        <button id="go-back">Go Back</button>
+        <button id="clear-highscores">Clear Highscores</button>
+    </div>
+
+
+
     <script src="script.js"></script>
 
 </body>

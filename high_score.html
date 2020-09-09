@@ -16,27 +16,17 @@
 </head>
 
 <body>
-    <div class="container" id="all-done-screen">
-        <h1>All done</h1>
-        <p>Your final score is 22.</p>
+    <div class="container">
+        <div class="container" id="high-score-screen">
+            <h1>High Scores</h1>
+            <p id="user-high-score">Alex - 5</p>
 
-        <form>
-            <Label>Enter Initials</Label>
-            <input id="initials">
-            <button id="submit">Submit</button>
-            </input>
-        </form>
-        <div id="response"></div>
+
+        </div>
+        <button id="go-back">Go Back</button>
+        <button id="clear-highscores">Clear Highscores</button>
     </div>
 
-    <div id="highscore-screen" class="hide container">
-        <h2 id="highscores">Highscores</h2>
-        <form>
-            <p class="user-high-score">Tim 22</p>
-        </form>
-
-        <button id="go-back">Go Back</button> 
-        <button id="clear-highscores">Clear Highscores</button>
     </div>
 
     <script src="highscorescript.js"></script>
