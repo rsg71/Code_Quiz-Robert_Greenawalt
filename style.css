@@ -1,8 +1,23 @@
 #start-button {
-    position:absolute;
-    top: 50%;
-    left: 50%;
+    
+   margin-top:20%; 
+   border-radius:10px;
 }
+
+#initial-screen-info {
+    font-size:1.4rem;
+}
+
+body {
+    background-image: url(imgs/question-mark-background.png);
+}
+
+#start-screen {
+    align-items: center;
+    text-align:center;
+    margin-top:10%;
+}
+
 
 
 #highscores {
@@ -37,4 +52,17 @@
     background-color:rgb(109, 199, 199);
     border: solid grey 2px;
     padding: 5px;
+}
+
+
+#question {
+    font-size:2rem;
+}
+
+#submit {
+    border-radius: 10px;
+}
+
+.final-menu-buttons {
+    border-radius: 10px;
 }
