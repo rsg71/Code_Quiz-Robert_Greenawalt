@@ -123,7 +123,7 @@ function GameOverScreen () {
             gameOverScreen.style.display = "block";
 
             var finalScore = document.getElementById("final-score");
-            finalScore.textContent = "Your final score is " + score + " / 6";
+            finalScore.textContent = "Your final score is: " + score + " / 6";
             // 
 
             var submit = document.getElementById("submit");
