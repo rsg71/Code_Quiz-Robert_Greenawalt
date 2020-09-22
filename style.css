@@ -18,6 +18,13 @@ body {
     margin-top:10%;
 }
 
+#answerOptions button {
+    max-width: 80%;
+}
+
+#game-over-screen {
+    margin-top:10%;
+}
 
 
 #highscores {
