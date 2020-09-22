@@ -1,13 +1,6 @@
 # Code_Quiz-Robert_Greenawalt
 
-## Usage
-
-<img src="imgs/start-screen.PNG" alt="start screen">
-<img src="imgs/gameplay.PNG" alt="gameplay screen">
-<img src="imgs/highscore.PNG" alt="highscore screen">
-<img src="imgs/gameover.PNG" alt="gameover screen">
-
-## Description
+# Description
 
 This project is a quiz game featuring Javascript based questions. The game starts with a start screen and the user can click to initialize the game. The timer begins to count down from 100 seconds and the user will select an answer; if they answer incorrectly 10 seconds are subtracted from the timer. If the user completes all six questions or the timer reaches 0, the game is over and the user is redirected to the game over screen. 
 
@@ -17,7 +10,18 @@ Next the user may submit their initials and record their score, and the score is
 
 https://rsg71.github.io/Code_Quiz-Robert_Greenawalt/
 
-## License
+# Usage
+
+<img src="imgs/start-screen.PNG" alt="start screen">
+<img src="imgs/gameplay.PNG" alt="gameplay screen">
+<img src="imgs/highscore.PNG" alt="highscore screen">
+<img src="imgs/gameover.PNG" alt="gameover screen">
+
+# Contact Information
+
+Robert Greenawalt (robert.greenawalt29@gmail.com)
+
+# License
 
 MIT License
 
