@@ -10,6 +10,12 @@ Next the user may submit their initials and record their score, and the score is
 
 https://rsg71.github.io/Code_Quiz-Robert_Greenawalt/
 
+# Technologies Used 
+
+* HTML
+* CSS
+* Javascript
+
 # Usage
 
 <img src="imgs/start-screen.PNG" alt="start screen">
